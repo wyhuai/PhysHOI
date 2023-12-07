@@ -1,4 +1,4 @@
 # PhysHOI
-Project page: [https://wyhuai.github.io/ddnm.io/](https://wyhuai.github.io/ddnm.io/)
+Project page: https://wyhuai.github.io/physhoi-page/
 
 Code and dataset coming soon...
