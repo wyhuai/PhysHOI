@@ -18,13 +18,13 @@ This repository contains the **code** and **dataset** release for the paper: "Ph
 - [x] Release training and evaluation code. 
 
 
-## Requirements🖥️
+## Requirements 🖥️
 
 It is suggested to perform inference with a graphical interface, which may need a local computer with a screen.
 
 You may need an NVIDIA GPU. The inference needs at least 6G memory. The training needs at least 12G memory (with 1024 envs).
 
-## Installation💽
+## Installation 💽
 
 Download Isaac Gym from the [website](https://developer.nvidia.com/isaac-gym), then
 follow the installation instructions.
@@ -36,14 +36,14 @@ pip install -r requirements.txt
 ```
 
 
-## PhysHOI🎯
+## PhysHOI 🎯
 
-### Pre-Trained Models
+### Pre-Trained Models 📁
 Download the trained models from this [link](https://drive.google.com/file/d/1jPnzd6PVVpiWNA1-MTVuUgIR_GOJMcLu/view?usp=sharing), unzip the files, and put them into `physhoi/data/models/`. The directory structure should be like `physhoi/data/models/backdribble/nn/PhysHOI.pth`, `physhoi/data/models/pass/nn/PhysHOI.pth`, etc.
 
-### Inference⛹️‍♂️
+### Inference ⛹️‍♂️
 
-#### Basic Evaluation
+#### Basic Evaluation ⛹️‍♂️
 For toss, fingerspin, pass, walkpick, and backspin, use the following command. Please change the `[task]` correspondingly.
 ```
 python physhoi/run.py --test --task PhysHOI_BallPlay --num_envs 16 --cfg_env physhoi/data/cfg/physhoi.yaml --cfg_train physhoi/data/cfg/train/rlg/physhoi.yaml --motion_file physhoi/data/motions/BallPlay/[task].pt --checkpoint physhoi/data/models/[task]/nn/PhysHOI.pth
@@ -61,7 +61,7 @@ For backdribble, we provide a trained model that use 30hz control frequency and 
 python physhoi/run.py --test --task PhysHOI_BallPlay --num_envs 16 --cfg_env physhoi/data/cfg/physhoi.yaml --cfg_train physhoi/data/cfg/train/rlg/physhoi.yaml --motion_file physhoi/data/motions/BallPlay/backdribble.pt --checkpoint physhoi/data/models/backdribble/nn/PhysHOI.pth --frames_scale 1.
 ```
 
-#### Other Options
+#### Other Options 💡
 To view the HOI dataset, add `--play_dataset`.
 
 To throw projectiles at the humanoid, add `--projtype Mouse`, and keep on clicking the screen with your mouse:
@@ -79,7 +79,7 @@ python physhoi/utils/make_video.py --image_path physhoi/data/images/backdribble 
 
 &nbsp;
 
-### Training🏋️
+### Training 🏋️
 
 All tasks share the same training code and most of the Hyper-parameters. To train the model, run the following command, and you may change the `--motion_file` to different HOI data: 
 ```
@@ -87,14 +87,14 @@ python physhoi/run.py --task PhysHOI_BallPlay --cfg_env physhoi/data/cfg/physhoi
 ```
 During the training, the latest checkpoint PhysHOI.pth will be regularly saved to output/, along with a Tensorboard log.
 
-#### Tips for Hyper-Parameters
+#### Tips for Hyper-Parameters 💡
 - For fingerspin, `cg2` is suggested to be `0.01`, due to the undetailed contact graph.
 - For walkpick, `stateInit` is suggested to be Random, due to the data inaccuracy.
 - Too large `cg2` and `cg2` may yield unnatural movements; Too small `cg2` and `cg2` may lead to fail grabs or false interaction. 
 
 &nbsp;
 
-### The BallPlay dataset🏀
+### The BallPlay dataset 🏀
 
 The basic BallPlay HOI dataset, including 8 human-basketball interaction skills, is placed in `physhoi/data/motions/BallPlay`. The frame rate is 25 FPS. The details of the data structure can be found in function `_load_motion` in `physhoi/env/tasks/physhoi.py`. The humanoid robot and basketball model are placed in `physhoi/data/assets/smplx/smplx_capsule.xml` and `physhoi/data/assets/mjcf/ball.urdf`, respectively. 
 
