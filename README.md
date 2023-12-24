@@ -54,7 +54,7 @@ python physhoi/run.py --test --task PhysHOI_BallPlay --num_envs 16 --cfg_env phy
 ```
 For changeleg, we provide a trained model that use 60hz control frequency and 60fps data frame rate:
 ```
-python physhoi/run.py --test --task PhysHOI_BallPlay --num_envs 16 --cfg_env physhoi/data/cfg/physhoi_60hz.yaml --cfg_train physhoi/data/cfg/train/rlg/physhoi.yaml --motion_file physhoi/data/motions/BallPlay/changeleg.pt --checkpoint physhoi/data/models/changeleg/nn/PhysHOI.pth
+python physhoi/run.py --test --task PhysHOI_BallPlay --num_envs 16 --cfg_env physhoi/data/cfg/physhoi_60hz.yaml --cfg_train physhoi/data/cfg/train/rlg/physhoi.yaml --motion_file physhoi/data/motions/BallPlay/changeleg.pt --checkpoint physhoi/data/models/changeleg_60fps/nn/PhysHOI.pth
 ```
 For backdribble, we provide a trained model that use 30hz control frequency and 25fps data frame rate:
 ```
