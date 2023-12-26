@@ -91,6 +91,8 @@ python physhoi/run.py --task PhysHOI_BallPlay --cfg_env physhoi/data/cfg/physhoi
 ```
 During the training, the latest checkpoint PhysHOI.pth will be regularly saved to output/, along with a Tensorboard log.
 
+It takes different epochs to reach convergence depending on the difficulty and data quality. For example, it takes 10000 epochs for toss and backdribble to converge, which takes about 9 hours on an NVIDIA 4090 Ti GPU.
+
 #### Tips for Hyper-Parameters 💡
 - For fingerspin, `cg2` is suggested to be `0.01`, due to the undetailed contact graph.
 - For walkpick, `stateInit` is suggested to be Random, due to the data inaccuracy.
