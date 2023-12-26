@@ -4,6 +4,8 @@
 
 This repository contains the **code** and **dataset** release for the paper: "PhysHOI: Physics-Based Imitation of Dynamic Human-Object Interaction"
 
+Our whole-body humanoid follows the SMPL-X kinematic tree and has a total of 51x3 DoF actuators, with fully dextrous hands.
+
 🏀 ***Now simulated humanoids can learn diverse basketball skills without designing task-specific rewards!***
 
 ![image](https://github.com/wyhuai/PhysHOI_dev/assets/95485229/6013e448-05ed-4a12-9164-aa5b34896598)
@@ -11,7 +13,9 @@ This repository contains the **code** and **dataset** release for the paper: "Ph
 
 ## TODOs
 
-- [ ] Add more data to the BallPlay dataset.  
+- [ ] Add more data to the BallPlay dataset.
+
+- [ ] Provide a physically rectified version of basic BallPlay (using PhysHOI).
 
 - [x] Release the basic BallPlay dataset.
 
@@ -68,7 +72,7 @@ To throw projectiles at the humanoid, add `--projtype Mouse`, and keep on clicki
 
 To change the size of the ball, add `--ball_size 1.5`, and you can change the value as you like:
 
-To test with different data frame rates, change the value of `--frames_scale` as you like.
+To test with different data frame rates, change the value of `--frames_scale` as you like, e.g., 1.5.
 
 To save the images, add `--save_images` to the command, and the images will be saved in `physhoi/data/images`.
 
@@ -96,7 +100,7 @@ During the training, the latest checkpoint PhysHOI.pth will be regularly saved t
 
 ### The BallPlay dataset 🏀
 
-The basic BallPlay HOI dataset, including 8 human-basketball interaction skills, is placed in `physhoi/data/motions/BallPlay`. The frame rate is 25 FPS. The details of the data structure can be found in function `_load_motion` in `physhoi/env/tasks/physhoi.py`. The humanoid robot and basketball model are placed in `physhoi/data/assets/smplx/smplx_capsule.xml` and `physhoi/data/assets/mjcf/ball.urdf`, respectively. 
+The basic BallPlay HOI dataset, including 8 human-basketball interaction skills, is placed in `physhoi/data/motions/BallPlay`. The frame rate is 25 FPS. The contact label denotes the contact between the ball and hands. The details of the data structure can be found in function `_load_motion` in `physhoi/env/tasks/physhoi.py`. The humanoid robot and basketball model are placed in `physhoi/data/assets/smplx/smplx_capsule.xml` and `physhoi/data/assets/mjcf/ball.urdf`, respectively. 
 
 &nbsp;
 
