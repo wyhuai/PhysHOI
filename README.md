@@ -94,7 +94,7 @@ During the training, the latest checkpoint PhysHOI.pth will be regularly saved t
 It takes different epochs to reach convergence depending on the difficulty and data quality. For example, it takes 10000 epochs for toss and backdribble to converge, which takes about 9 hours on an NVIDIA 4090 Ti GPU.
 
 #### Tips for Hyper-Parameters 💡
-- For fingerspin, `cg2` is suggested to be `0.01`, due to the undetailed contact graph.
+- For fingerspin, `cg2` is suggested to be `0.01`, considering the default contact graph is not detailed enough for finger-level operations.
 - For walkpick, `stateInit` is suggested to be Random, due to the data inaccuracy.
 - Too large `cg2` and `cg2` may yield unnatural movements; Too small `cg2` and `cg2` may lead to fail grabs or false interaction. 
 
