@@ -4,9 +4,9 @@
 
 This repository contains the **code** and **dataset** release for the paper: "PhysHOI: Physics-Based Imitation of Dynamic Human-Object Interaction"
 
-Our whole-body humanoid follows the SMPL-X kinematic tree and has a total of 51x3 DoF actuators, with fully dextrous hands.
+Our whole-body humanoid follows the **SMPL-X** kinematic tree and has a total of **51x3 DoF** actuators, with fully **dextrous hands**.
 
-🏀 ***Now simulated humanoids can learn diverse basketball skills without designing task-specific rewards!***
+🏀 Now simulated humanoids can learn diverse basketball skills **without designing task-specific rewards!**
 
 ![image](https://github.com/wyhuai/PhysHOI_dev/assets/95485229/6013e448-05ed-4a12-9164-aa5b34896598)
 
