@@ -6,7 +6,7 @@ This repository contains the **code** and **dataset** release for the paper: "Ph
 
 Our whole-body humanoid follows the **SMPL-X** kinematic tree and has a total of **51x3 DoF** actuators, with fully **dextrous hands**.
 
-🏀 Now simulated humanoids can imitate diverse basketball interactions **without designing task-specific rewards!**
+🏀 Now simulated humanoids can learn diverse basketball interactions **without designing task-specific rewards!**
 
 ![image](https://github.com/wyhuai/PhysHOI_dev/assets/95485229/6013e448-05ed-4a12-9164-aa5b34896598)
 
