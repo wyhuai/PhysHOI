@@ -6,7 +6,7 @@ This repository contains the **code** and **dataset** release for the paper: "Ph
 
 Our whole-body humanoid follows the **SMPL-X** kinematic tree and has a total of **51x3 DoF** actuators, with fully **dextrous hands**.
 
-🏀 Now simulated humanoids can learn diverse basketball skills **without designing task-specific rewards!**
+🏀 Now simulated humanoids can imitate diverse basketball interactions **without designing task-specific rewards!**
 
 ![image](https://github.com/wyhuai/PhysHOI_dev/assets/95485229/6013e448-05ed-4a12-9164-aa5b34896598)
 
@@ -102,7 +102,7 @@ It takes different epochs to reach convergence depending on the difficulty and d
 
 ### The BallPlay dataset 🏀
 
-The basic BallPlay HOI dataset, including 8 human-basketball interaction skills, is placed in `physhoi/data/motions/BallPlay`. The frame rate is 25 FPS. The contact label denotes the contact between the ball and hands. The details of the data structure can be found in function `_load_motion` in `physhoi/env/tasks/physhoi.py`. The humanoid robot and basketball model are placed in `physhoi/data/assets/smplx/smplx_capsule.xml` and `physhoi/data/assets/mjcf/ball.urdf`, respectively. 
+The basic BallPlay HOI dataset, including 8 human-basketball interactions, is placed in `physhoi/data/motions/BallPlay`. The frame rate is 25 FPS. The contact label denotes the contact between the ball and hands. The details of the data structure can be found in function `_load_motion` in `physhoi/env/tasks/physhoi.py`. The humanoid robot and basketball model are placed in `physhoi/data/assets/smplx/smplx_capsule.xml` and `physhoi/data/assets/mjcf/ball.urdf`, respectively. 
 
 &nbsp;
 
@@ -121,3 +121,8 @@ The code implementation is based on ASE:
 
 The SMPL-X humanoid robot is generated using UHC:
 - https://github.com/ZhengyiLuo/UniversalHumanoidControl
+
+Further extension:
+- https://github.com/wyhuai/SkillMimic
+
+
